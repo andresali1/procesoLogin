@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'Perfil de Usuario' }) %>
+
+    <head>
+        <%- include('partials/header') %>
+    </head>
+
+    <body>
+        <%- include('partials/nav', {navtitle: 'Felipe' }) %>
+            <main class="user">
+                <h2 class="user--title">Bienvenido Usuario</h2>
+                <article class="user__profile">
+                    <div class="user--avatar">
+                        <img src="/img/users/<%= user.avatar %> " alt="logo">
+                    </div>
+                    <div class="user--info">
+                        <h3><%= user.name %></h3>                        
+                        <p><%= user.country %></p>
+                        <p><%= user.email %></p>
+                    </div>
+                </article>
+                <div class="user--button">
+                    <button><a href="/logout">Logout</a></button>
+                </div>
+            </main>
+    </body>
+
+</html>

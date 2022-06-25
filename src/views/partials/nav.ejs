@@ -1,0 +1,19 @@
+<header class="header">
+  <ul class="nav-bar">
+    <li><a href="/">Home</a></li>
+    <% if(locals.isLogged) { %>
+      <li class="user--profile">        
+        <a href="/userProfile">
+          <img class="user--avatar" src="/img/users/<%= locals.userLogged.avatar %> " alt="">        
+          <p><%= locals.userLogged.name %> </p>
+        </a>
+      </li>
+      <% } else { %>
+        <li><a href="/register">Registro</a></li>
+        <li><a href="/login">Login</a></li>
+        <% } %>
+  </ul>
+  <h1>
+    <%= navtitle %>
+  </h1>
+</header>

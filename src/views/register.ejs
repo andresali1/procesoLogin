@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'Register' }) %>
+
+    <head>
+        <%- include('partials/header') %>
+    </head>
+
+    <body>
+        <%- include('partials/nav', {navtitle: 'Felipe' }) %>
+            <main class="login">
+                <div class="login-chart">
+                    <h2>Registro de Usuario</h2>
+                    <form action="/register" method="post" enctype="multipart/form-data">
+                        <div class="login__form">
+                            <input 
+                            class="login__form--input <%= locals.errors && errors.name ? 'isInvalid' : null %>"
+                            type="text"
+                            name="name"
+                            placeholder="Nombre Completo"
+                            value="<%= locals.oldData && oldData.name ? oldData.name : null %>">
+                            <% if(locals.errors && errors.name) { %>
+                                <div class="form-danger">
+                                    <br>
+                                    <%= errors.name.msg %> 
+                                </div>
+                                <% } %>
+                        </div>
+                        <div class="login__form">
+                            <input 
+                            class="login__form--input <%= locals.errors && errors.email ? 'isInvalid' : null %>"
+                            type="text"
+                            name="email"
+                            placeholder="Correo electrónico"
+                            value="<%= locals.oldData && oldData.email ? oldData.email : null %>">
+                            <% if(locals.errors && errors.email) { %>
+                                <div class="form-danger">
+                                    <br>
+                                    <%= errors.email.msg %> 
+                                </div>
+                                <% } %>
+                        </div>
+                        <div class="login__form">
+                            <input
+                            class="login__form--input <%= locals.errors && errors.password ? 'isInvalid' : null %>"
+                            type="password"
+                            name="password"
+                            placeholder="Contraseña"
+                            value="<%= locals.oldData && oldData.password ? oldData.password : null %>">
+                            <% if(locals.errors && errors.password) { %>
+                                <div class="form-danger">                                    
+                                    <%= errors.password.msg %> 
+                                </div>
+                                <% } %>
+                        </div>
+                        <div class="login__form">
+                            <select
+                            class="login__form--select <%= locals.errors && errors.country ? 'isInvalid' : null %>"
+                            name="country">
+                                <option value="" selected disabled hidden>País de nacimiento</option>
+                                <% 
+                                let countries = ['Colombia', 'Argentina', 'Brasil', 'Uruguay', 'Bolivia',
+                                'Chile', 'Perú', 'Venezuela', 'Paraguay', 'Ecuador']
+                                %>
+                                <% for(let i = 0; i < countries.length; i++) { %> 
+                                <option value="<%= countries[i] %>" <%= locals.oldData && oldData.country == countries[i] ? 'selected' : null %>><%= countries[i] %></option>
+                                <% } %>                                
+                            </select>
+                            <% if(locals.errors && errors.country) { %>
+                                <div class="form-danger">
+                                    <br>
+                                    <%= errors.country.msg %> 
+                                </div>
+                                <% } %>
+                        </div>
+                        <label for="img">Imagen del Producto</label>
+                        <div class="login__form">
+                            <input type="file" name="avatar" accept=".jpg .png. .jepg .gif">
+                        </div>
+                        <div class="login__form--button">
+                            <input type="submit" value="Registrarse">
+                        </div>
+                    </form>
+                </div>
+
+            </main>
+    </body>
+
+</html>

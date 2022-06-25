@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap");
+
+.header {
+  background-color: #D9D9D9;
+  width: 100vw;
+  border-bottom: #000000 1px solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  width: 10%;
+  background-color: #D9D9D9;
+  color: #545454;
+}
+
+.logo {
+  background-color: #D9D9D9;
+  width: 5%;
+  padding-top: 3px;
+  margin: auto;
+}
+
+.logo img {
+  border-radius: 50%;
+}
+
+.nav-bar {
+  width: 70%;
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-bar li {
+  background-color: #D9D9D9;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-bar a {
+  color: #545454;
+  text-decoration: none;
+}
+
+.user--profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user--profile img {
+  border-radius: 50%;
+}
+
+.user--avatar {
+  width: 15%;
+}
+
+body {
+  background-color: #593E3E;
+  font-family: 14px 'Shippori Antique', sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* Login /////////////////////////////////////////////////////////////*/
+.login-chart {
+  background-color: #EDEDED;
+  color: #545454;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 3%;
+  border-radius: 3%;
+}
+.login {
+  text-align: center;
+}
+.login h2 {
+  padding: 2%;
+  color: #545454;
+}
+.login__form {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.login__form--input {
+  width: 60%;
+  border: white;
+}
+.isInvalid {
+  border: red solid 1px;
+}
+.login__form--check {
+  width: 10%;
+  display: flex;
+  margin-left: 25%;
+}
+.login__form--check p {
+  color: #545454;
+}
+.login__form--button {
+  padding: 3% 0;
+}
+.login__form--select {
+  width: 60%;
+  color: #545454;
+}
+.login__form--button input {
+  background-color: #D9D9D9;
+  color: #545454;
+  padding: 0.5%;
+}
+.form-danger {
+  width: 50%;
+  color: red;
+  margin-top: -1%;
+  margin-right: 30%;
+}
+
+/* Perfil de usuario /////////////////////////////////////////////////////////////*/
+.user--title {
+  color: #D9D9D9;
+  text-align: center;
+  margin-top: 3%;
+  position: relative;
+  top: 10px;
+}
+.user__profile {
+  background-color: #D9D9D9;
+  width: 80%;  
+  margin: auto;
+  margin-top: 0.5%;
+  display: flex;
+  border-radius: 5%;
+}
+.user--avatar {
+  max-width: 30%;
+  border-right: 1px solid #593E3E;
+}
+.user--avatar img {
+  width: 50%;
+  margin: 5% 0 5% 20%;
+  border-radius: 50%;
+}
+.user--info {
+  max-width: 70%;
+  margin: auto;
+}
+.user--button{
+  text-align: center;
+  position: relative;
+  bottom: 2.5vw;
+  left: 35vw;
+}
+.user--button a {
+  text-decoration: none;
+  color: #545454;
+}
